@@ -16,5 +16,6 @@ class Item < ApplicationRecord
 
   before_validation do
     self.slug ||= "#{title.to_s.parameterize}-#{rand(36**6).to_s(36)}"
+    self.image = "https://static.productionready.io/images/smiley-cyrus.jpg" if image.blank?
   end
 end
