@@ -22,7 +22,7 @@ class ItemsController < ApplicationController
           title: item.title,
           slug: item.slug,
           description: item.description,
-          image: item.image.presence || 'http://localhost:3001/placeholder.png',
+          image: item.image.presence || 'https://static.productionready.io/images/smiley-cyrus.jpg',
           tagList: item.tags.map(&:name),
           createdAt: item.created_at,
           updatedAt: item.updated_at,
